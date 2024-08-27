@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Side Panel Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        #toggleButton {
+            margin: 20px;
+        }
+
+        .side-panel {
+            height: 100%;
+            width: 250px;
+            position: fixed;
+            top: 0;
+            right: -250px; /* Hide panel by default */
+            background-color: #111;
+            color: #fff;
+            transition: right 0.3s, opacity 0.3s, visibility 0.3s;
+            padding: 15px;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .side-panel h2 {
+            margin-top: 0;
+        }
+
+        .side-panel button {
+            margin-top: 10px;
+        }
+
+        .side-panel.open {
+            right: 0;
+            opacity: 1;
+            visibility: visible;
+        }
+    </style>
+</head>
+<body>
+    <button id="toggleButton">Open Side Panel</button>
+    <div id="sidePanel" class="side-panel">
+        <h2>More options:
+<!DOCTYPE html>
+<html>
+<body>
+
+
+
+<p id="demo"></p>
+
+<!DOCTYPE html>
+<html>
+<body>
+
+
+
+<p id="demo2"></p>
+
+<script>
+let day;
+switch (new Date().getDay()) {
+  case 0:
+    day = "Sunday";
+    break;
+  case 1:
+    day = "Monday";
+    break;
+  case 2:
+    day = "Tuesday";
+    break;
+  case 3:
+    day = "Wednesday";
+    break;
+  case 4:
+    day = "Thursday";
+    break;
+  case 5:
+    day = "Friday";
+    break;
+  case  6:
+    day = "Saturday";
+}
+document.getElementById("demo2").innerHTML = "" + day;
+</script>
+<p> More options:   <div class="menu-item" onclick="openApp('settings')">Settings</div>
+  <div class="menu-item" onclick="openApp('game')">Pop Catch</div>
+<div class="menu-item" onclick="openApp('tic-tac-toe')">Tictactoe</div>
+</body>
+</html>
+
+.
+<script>
+let myVar = setInterval(myTimer ,1000);
+function myTimer() {
+  const d = new Date();
+  document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+}
+</script>
+
+</body>
+</html>
+</h2>
+        <p></p>
+    </div>
+    <script>
+        const toggleButton = document.getElementById('toggleButton');
+        const sidePanel = document.getElementById('sidePanel');
+
+        toggleButton.addEventListener('click', function() {
+            if (sidePanel.classList.contains('open')) {
+                sidePanel.classList.remove('open');
+                toggleButton.textContent = 'Open Side Panel';
+            } else {
+                sidePanel.classList.add('open');
+                toggleButton.textContent = 'Close Side Panel';
+            }
+        });
+    </script>
+</body>
+</html>

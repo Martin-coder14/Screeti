@@ -1,0 +1,557 @@
+        body, html {
+.white-text {
+            color: white;
+        }
+
+.start-menu.open {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.start-menu.close {
+    transform: scale(0.8);
+    opacity: 0;
+}
+
+.maximized {
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+
+.calculator {
+    width: 250px;
+    padding: 10px;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.calc-display {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    text-align: right;
+    padding: 5px;
+}
+
+.calc-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+}
+
+.calc-buttons button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.2em;
+    background-color: #e0e0e0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.calc-buttons button:hover {
+    background-color: #ccc;
+}
+
+/* Add your custom styles for Linia Browser */
+#linia
+.app-window {
+    position: absolute;
+    width: 900px;
+    height: 700px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.app-header {
+opacity: 0.90;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border-bottom: 1px solid #ccc;
+    cursor: move;
+}
+
+.app-content {
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 40px);
+}
+
+.browser-toolbar {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border-bottom: 1px solid #ccc;
+}
+
+.browser-toolbar input {
+    flex: 1;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+.browser-toolbar button {
+    padding: 5px 10px;
+}
+            #command-prompt {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    width: 400px;
+    height: 300px;
+    background: black;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: none;
+    flex-direction: column;
+    cursor: grab;
+    z-index: 999; /* Ensure it's above other windows */
+    color: green;
+}
+#command-prompt .app-header {
+    background: rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: grab;
+}
+#command-prompt .app-content {
+    padding: 10px;
+    flex: 1;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+}
+#command-prompt input[type="text"], #command-prompt button {
+    margin-top: 10px;
+    padding: 9px;
+    font-size: 16px;
+}
+#command-output {
+    height: calc(100% - 40px);
+    overflow-y: auto;
+}
+
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        #desktop {
+             font-family: 'Trebuchet MS', sans-serif;
+            width: 100vw;
+            height: 100vh;
+            background: url('') no-repeat center center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            overflow: hidden;
+            position: relative;
+        }
+
+        #taskbar {
+           
+            height: 50px;
+bottom: 9000px;
+            background: rgba(2, 0, 10, 0.83);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 10px;
+            color: white;
+        }
+
+        #start-button {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+     #menu-button {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #taskbar-icons {
+            display: flex;
+            gap: 4px;
+        }
+
+        .icon {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 9px;
+            border-radius: 0px;
+            cursor: pointer;
+        }
+#icon3 {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 9px;
+            border-radius: 90px;
+            cursor: pointer;
+        }
+.icon3:hover {
+            background: rgba(0, 0, 0, 0.1);
+             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            width: 70px;
+ transform: scale(1.05);
+        }
+        .icon img {
+            width: 24px;
+            height: 25px;
+        }
+.icon:hover {
+            background: rgba(0, 0, 0, 0.1);
+             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            width: 20px;
+ transform: scale(1.25);
+transition: background-color 0.3s, transform 0.2s;
+        }
+        #start-menu {
+            opacity: 0.93;
+            position: absolute;
+            bottom: 50px;
+            left: 10px;
+            width: 250px;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            display: none;
+            flex-direction: column;
+            transition: left 0.3s, opacity 0.3s, visibility 0.3s;
+        }
+#option-menu {
+            opacity: 0.93;
+            position: absolute;
+            bottom: 50px;
+            left: 10px;
+            width: 250px;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            display: none;
+            flex-direction: column;
+        }
+
+      #more-menu {
+            opacity: 0.93;
+            position: absolute;
+            bottom: 50px;
+            left: -10px;
+            width: 250px;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            display: none;
+            flex-direction: column;
+        }
+
+#nothinghere {
+            position: absolute;
+            bottom: 50px;
+            left: 10px;
+            width: 250px;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            display: none;
+            flex-direction: column;
+        }
+        .menu-item {
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .menu-item:hover {
+            background: rgba(0, 0, 0.9, 0.2);
+        }
+
+        .app-window {
+             resize: both;
+  overflow: auto;
+ display: none;
+  border-radius: 10px;
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            width: 400px;
+            height: 300px;
+            background: white;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            display: none;
+            flex-direction: column;
+            cursor: grab;
+ z-index: 1;
+        }
+
+        .app-header {
+            background: rgba(0, 0, 20, 0.2);
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: grab;
+        }
+
+        .close-btn {
+            cursor: pointer;
+            padding: 10px; /* Increase hitbox size */
+            margin-right: -10px; /* Center X within padding */
+        }
+
+        .minimize-btn {
+            cursor: pointer;
+            padding: 10px; /* Increase hitbox size */
+            margin-right: 5px;
+        }
+
+        .app-content {
+            padding: 10px;
+            flex: 1;
+            overflow: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .color-button {
+            margin: 10px;
+            padding: 20px 40px; /* Double the padding */
+            cursor: pointer;
+            border: 1px solid #000;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 16px; /* Double the font size */
+        }
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 1.0); /* Solid black */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000; /* Ensure it's above other content */
+            color: white;
+        }
+
+        .overlay-content {
+            text-align: center;
+        }
+
+        .board {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 5px;
+            margin: 10px;
+        }
+
+        .cell {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2em;
+            cursor: pointer;
+        }
+
+        .action-button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            cursor: pointer;
+            border: 1px solid #000;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+       
+    /* Existing CSS */
+
+    .task-manager-content div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px;
+    }
+
+    .task-manager-content button {
+        margin-left: 10px;
+        cursor: pointer;
+        border: 1px solid #000;
+        border-radius: 5px;
+        padding: 5px;
+    }
+#app1 {
+    opacity: 0.95;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    width: 300px;
+    height: 300px;
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: none;
+    flex-direction: column;
+    cursor: grab;
+}
+#app3 {
+    opacity: 0.95;
+    position: absolute;
+    top: 425px;
+    left: 10px;
+    width: 300px;
+    height: 450px;
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: none;
+    flex-direction: column;
+    cursor: grab;
+}
+
+#SSP {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    width: 540px;
+    height: 650px;
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: none;
+    flex-direction: column;
+    cursor: grab;
+    z-index: 999; /* Ensure it's above other windows */
+}
+#SSPMF {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    width: 540px;
+    height: 650px;
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: none;
+    flex-direction: column;
+    cursor: grab;
+    z-index: 999; /* Ensure it's above other windows */
+}
+#secret {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    width: 400px;
+    height: 101px;
+    background: cyan;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: none;
+    flex-direction: column;
+    cursor: grab;
+    z-index: 999; /* Ensure it's above other windows */
+}
+#progress-bar {
+    width: 100%;
+    background-color: #ddd;
+    margin-top: 10px;
+}
+
+#progress {
+    width: 0;
+    height: 20px;
+    background-color: #4caf50;
+    text-align: center;
+    line-height: 20px;
+    color: white;
+}
+
+#notepad++{
+    opacity: 0.92;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    width: 400px;
+    height: 200px;
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: none;
+    flex-direction: column;
+    cursor: grab;
+    z-index: 999; /* Ensure it's above other windows */
+}
+#start-menu {
+    background-color: #white;
+    color: black;
+    padding: 10px;
+    width: 200px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: Arial, sans-serif;
+}
+
+.menu-item {
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #gray;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    text-align: center;
+}
+
+.menu-item:hover {
+    background-color: #555;
+    transform: scale(1.05);
+}
+
+.menu-item img {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.options-item {
+    flex-direction: row-reverse;
+     width: 20px;
+        font-size: 22px;
+     left: 10px;
+    padding: 5px;
+    margin: 10px 0px;
+    background-color: #gray;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+ margin-left: 10px;
+}
+
+.options-item:hover {
+    background-color: #555;
+    transform: scale(1.05);
+}
+
+.options-item img {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+

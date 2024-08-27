@@ -1,0 +1,2545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Screeti OS</title>
+<meta property="og:image" content="Screetistartmenu.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div id="desktop">
+
+<div class="icon3" onclick="openApp('notepad')">
+    <img src="ognotepad.png" alt="notepad.png" width="50" height="50"></div>
+<div class="icon3" onclick="openApp('linia')"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRB4Hy9w7rfkpLY2DlmHjJBkpd8lJ5ovpgOhA&s" alt="Linia Browser Icon"width="50" height="50"></div>
+
+
+<div class="icon3" onclick="openApp('tic-tac-toe')">
+    <img src="Tic-tac-toe.png" alt="Trulli" width="50" height="50"></div>
+
+<div class="icon3" onclick="openApp('notepad3')">
+    <img src="notepad.png" alt="notepad.png" width="50" height="50"></div>
+<div class="icon3" onclick="memz()">
+    <img src="existnot.png" alt="notepad.png" width="50" height="50"></div>
+<div class="icon3" onclick="openApp('notepad4')">
+    <img src="notepad.png" alt="notepad.png" width="50" height="50"></div>
+<div class="icon3" onclick="openApp('notepad5')">
+    <img src="notepad.png" alt="notepad.png" width="50" height="50"></div>
+<div class="icon3" onclick="openApp('calculator')">
+    <img src="calculator.png" alt="calcislayyyyy.png" width="50" height="50"></div>
+<div id="taskbar">
+            <div id="start-button"><img src="Screetistartmenu.png" alt="Start" width="40" height="40"></div>
+
+ 
+            <div id="taskbar-icons">
+<div class="icon" onclick="openApp('edge')"><img src="" alt="Microsoft Edge Icon"></div>
+<div class="icon" onclick="openApp('command-prompt')">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Windows_Terminal_logo.svg/2560px-Windows_Terminal_logo.svg.png" alt="Trulli" width="500" height="333">
+</div>
+<div class="icon" onclick="openApp('linia')"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRB4Hy9w7rfkpLY2DlmHjJBkpd8lJ5ovpgOhA&s" alt="Linia Browser Icon"></div>
+<div id="edge" class="app-window">
+    <div class="app-header" onmousedown="startDrag(event, 'edge')">
+        <span>Microsoft Edge</span>
+        <div class="header-buttons">
+            <span class="minimize-btn" onclick="minimizeApp('edge')">-</span>
+            <span class="close-btn" onclick="closeApp('edge')">X</span>
+        </div>
+    </div>
+    <div class="app-content">
+        <!-- Add content specific to Microsoft Edge -->
+        <iframe src="https://www.microsoft.com" style="width: 100%; height: calc(100% - 40px); border: none;"></iframe>
+    </div>
+</div>
+<div class="icon" onclick="openApp('file-explorer')"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5afpx3wsQgzXLHss8vgGV55nP5_B6fdhK6w&s" alt="Explorer Icon"></div>
+                <div class="icon" onclick="openApp('app1')"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaHe3l6qTTllNwvCiuqPw7dGOTI_lB3l5H8w&s" alt="App1 Icon"></div>
+                <div class="icon" onclick="openApp('app2')"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkABiNnCnGKeJbJRbc7Sbw-pLzTSC1_v3dog&s" alt="App2 Icon"></div>
+<!DOCTYPE html>
+<html>
+<body>
+
+
+
+<p id="demo"></p>
+
+<!DOCTYPE html>
+<html>
+<body>
+
+
+
+<p id="demo2"></p>
+
+<script>
+let day;
+switch (new Date().getDay()) {
+  case 0:
+    day = "Sunday";
+    break;
+  case 1:
+    day = "Monday";
+    break;
+  case 2:
+    day = "Tuesday";
+    break;
+  case 3:
+    day = "Wednesday";
+    break;
+  case 4:
+    day = "Thursday";
+    break;
+  case 5:
+    day = "Friday";
+    break;
+  case  6:
+    day = "Saturday";
+}
+document.getElementById("demo2").innerHTML = "" + day;
+</script>
+
+</body>
+</html>
+
+
+<script>
+let myVar = setInterval(myTimer ,1000);
+function myTimer() {
+  const d = new Date();
+  document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+}
+</script>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Side Panel Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        #toggleButton {
+            margin: 20px;
+        }
+
+        .side-panel {
+            height: 100%;
+            width: 250px;
+            position: fixed;
+            top: 0;
+            right: -250px; /* Hide panel by default */
+            background-color: #111;
+            color: #fff;
+            transition: right 0.3s, opacity 0.3s, visibility 0.3s;
+            padding: 15px;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .side-panel h2 {
+            margin-top: 0;
+        }
+
+        .side-panel button {
+            margin-top: 10px;
+        }
+
+        .side-panel.open {
+            right: 0;
+            opacity: 1;
+            visibility: visible;
+        }
+    </style>
+</head>
+<body>
+    <button id="toggleButton">Open Side Panel</button>
+    <div id="sidePanel" class="side-panel">
+        <h2>More options:
+<!DOCTYPE html>
+<html>
+<body>
+
+
+
+<p id="demo"></p>
+
+<!DOCTYPE html>
+<html>
+<body>
+
+
+
+<p id="demo2"></p>
+
+<script>
+let day;
+switch (new Date().getDay()) {
+  case 0:
+    day = "Sunday";
+    break;
+  case 1:
+    day = "Monday";
+    break;
+  case 2:
+    day = "Tuesday";
+    break;
+  case 3:
+    day = "Wednesday";
+    break;
+  case 4:
+    day = "Thursday";
+    break;
+  case 5:
+    day = "Friday";
+    break;
+  case  6:
+    day = "Saturday";
+}
+document.getElementById("demo2").innerHTML = "" + day;
+</script>
+<p> More options:   <div class="menu-item" onclick="openApp('settings')">Settings</div>
+  <div class="menu-item" onclick="openApp('game')">Pop Catch</div>
+<div class="menu-item" onclick="openApp('tic-tac-toe')">Tictactoe</div>
+<div class="menu-item" onclick="openApp('quiz')">Screeti's Quiz</div>
+</body>
+</html>
+
+.
+<script>
+let myVar = setInterval(myTimer ,1000);
+function myTimer() {
+  const d = new Date();
+  document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+}
+</script>
+
+</body>
+</html>
+</h2>
+        <p></p>
+    </div>
+    <script>
+        const toggleButton = document.getElementById('toggleButton');
+        const sidePanel = document.getElementById('sidePanel');
+
+        toggleButton.addEventListener('click', function() {
+            if (sidePanel.classList.contains('open')) {
+                sidePanel.classList.remove('open');
+                toggleButton.textContent = 'More';
+            } else {
+                sidePanel.classList.add('open');
+                toggleButton.textContent = 'Close Side sssssssssssssssssssssssssssPanel';
+            }
+        });
+    </script>
+</body>
+</html>
+
+         </div> 
+        </div>
+        <div id="start-menu">
+<div class="options-item" onclick="openApp('settings')"><img src="Settings.png" alt="Settings"></div>
+<div class="menu-item" onclick="openApp('app1')">Welcome App</div>
+      <div class="menu-item" onclick="openNotepad()">Notepad</div>
+            
+        <div class="menu-item" onclick="openApp('store')">Screeti store</div>
+            <div class="menu-item" onclick="openApp('app2')">Color Changer</div>
+            <div class="menu-item" onclick="openApp('file-explorer')">File Explorer</div>
+            <div class="menu-item" onclick="openTaskManager()">Task Manager</div>
+<div class="menu-item" onclick="openApp('edge')">Microsoft Edge</div>
+<div class="menu-item" onclick="openCalculator('calculator')">Calculator</div>  
+<div class="options-item" onclick="openApp('app3')">:</div>
+</div>          
+</div>
+
+<div id="calculator" class="app-window">
+    <div class="app-header" onmousedown="startDrag(event, 'calculator')">
+        <span>Calculator</span>
+        <div class="header-buttons">
+<span class="maximize-btn">[]</span>
+            <span class="minimize-btn" onclick="minimizeApp('calculator')">-</span>
+            <span class="close-btn" onclick="closeApp('calculator')">X</span>
+        </div>
+    </div>
+    <div class="app-content">
+        <div class="calculator">
+            <input type="text" id="calc-display" class="calc-display" readonly>
+            <div class="calc-buttons">
+                <button onclick="appendToDisplay('1')">1</button>
+                <button onclick="appendToDisplay('2')">2</button>
+                <button onclick="appendToDisplay('3')">3</button>
+                <button onclick="appendToDisplay('+')">+</button>
+                <button onclick="appendToDisplay('4')">4</button>
+                <button onclick="appendToDisplay('5')">5</button>
+                <button onclick="appendToDisplay('6')">6</button>
+                <button onclick="appendToDisplay('-')">-</button>
+                <button onclick="appendToDisplay('7')">7</button>
+                <button onclick="appendToDisplay('8')">8</button>
+                <button onclick="appendToDisplay('9')">9</button>
+                <button onclick="appendToDisplay('*')">*</button>
+                <button onclick="appendToDisplay('0')">0</button>
+                <button onclick="clearDisplay()">C</button>
+                <button onclick="calculate()">=</button>
+                <button onclick="appendToDisplay('/')">/</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+        <div id="tic-tac-toe" class="app-window">
+            <div class="app-header" onmousedown="startDrag(event, 'tic-tac-toe')">
+                <span>Tic Tac Toe</span>
+                <div class="header-buttons">
+<span class="maximize-btn">[#]</span>
+                    <span class="minimize-btn" onclick="minimizeApp('tic-tac-toe')">-</span>
+                    <span class="close-btn" onclick="closeApp('tic-tac-toe')">X</span>
+                </div>
+            </div>
+            <div class="app-content">
+                <div id="board" class="board">
+                    <div class="cell" onclick="placeMarker(0, 0)"></div>
+                    <div class="cell" onclick="placeMarker(0, 1)"></div>
+                    <div class="cell" onclick="placeMarker(0, 2)"></div>
+                    <div class="cell" onclick="placeMarker(1, 0)"></div>
+                    <div class="cell" onclick="placeMarker(1, 1)"></div>
+                    <div class="cell" onclick="placeMarker(1, 2)"></div>
+                    <div class="cell" onclick="placeMarker(2, 0)"></div>
+                    <div class="cell" onclick="placeMarker(2, 1)"></div>
+                    <div class="cell" onclick="placeMarker(2, 2)"></div>
+                </div>
+                <button class="action-button" onclick="resetGame()">Reset Game</button>
+            </div>
+        </div>
+<div id="notepad" class="app-window">
+    <div class="app-header" onmousedown="startDrag(event, 'notepad')">
+        <span>Notepad</span>
+        <div class="header-buttons">
+            <button class="save-btn" onclick="saveNotepadContent()">Save</button>
+            <span class="minimize-btn" onclick="minimizeApp('notepad')">-</span>
+             <span class="maximize-btn">[ ]</span>
+
+            <span class="close-btn" onclick="closeApp('notepad')">X</span>
+        </div>
+    </div>
+    <div class="app-content">
+        <textarea id="notepad-content" style="width: 100%; height: calc(100% - 40px);"></textarea>
+    </div>
+</div>
+
+<div id="notepad2" class="app-window">
+    <div class="app-header" onmousedown="startDrag(event, 'notepad2')">
+        <span>Notepad</span>
+        <div class="header-buttons">
+            <button class="save-btn" onclick="saveNotepadContent()">Save</button>
+            <span class="minimize-btn" onclick="minimizeApp('notepad2')">-</span>
+             <span class="maximize-btn">[ ]</span>
+
+            <span class="close-btn" onclick="closeApp('notepad2')">X</span>
+        </div>
+    </div>
+    <div class="app-content">
+        <textarea id="notepad-content" style="width: 100%; height: calc(100% - 40px);">appname:restart.exe:"secret"</textarea>
+    </div>
+</div>
+<div id="notepad3" class="app-window">
+    <div class="app-header" onmousedown="startDrag(event, 'notepad3')">
+        <span>Notepad</span>
+        <div class="header-buttons">
+            <button class="save-btn" onclick="saveNotepadContent()">Save</button>
+            <span class="minimize-btn" onclick="minimizeApp('notepad3')">-</span>
+             <span class="maximize-btn">[ ]</span>
+
+            <span class="close-btn" onclick="closeApp('notepad3')">X</span>
+        </div>
+    </div>
+    <div class="app-content">
+        <textarea id="notepad-content" style="width: 100%; height: calc(100% - 40px);">system apps installed:linia, command-prompt, app1, app2, notepad, settings"</textarea>
+    </div>
+</div>
+<div id="notepad4" class="app-window">
+    <div class="app-header" onmousedown="startDrag(event, 'notepad4')">
+        <span>Notepad</span>
+        <div class="header-buttons">
+            <button class="save-btn" onclick="saveNotepadContent()">Save</button>
+            <span class="minimize-btn" onclick="minimizeApp('notepad4')">-</span>
+             <span class="maximize-btn">[ ]</span>
+
+            <span class="close-btn" onclick="closeApp('notepad4')">X</span>
+        </div>
+    </div>
+    <div class="app-content">
+        <textarea id="notepad-content" style="width: 100%; height: calc(100% - 40px);">- . ... - .. -. --. / - . ... - .. -. --. / - .-. .- -. ... .-.. .- - . / - .-. .- -. ... .-.. .- - . / --- .... / .-- .... --- . ...- . .-. / -- --- ...- . ... / ..-. .. .-. ... - / .. ... / --. .- -.-- / .-.. --- .-.. / .... .- .... .- .... .... .- .... .- .... .- .... .- .... .... .- .... .- .... .-"</textarea>
+    </div>
+</div>
+<div id="notepad5" class="app-window">
+    <div class="app-header" onmousedown="startDrag(event, 'notepad5')">
+        <span>Notepad</span>
+        <div class="header-buttons">
+            <button class="save-btn" onclick="saveNotepadContent()">Save</button>
+            <span class="minimize-btn" onclick="minimizeApp('notepad5')">-</span>
+             <span class="maximize-btn">[ ]</span>
+
+            <span class="close-btn" onclick="closeApp('notepad5')">X</span>
+        </div>
+    </div>
+    <div class="app-content">
+        <textarea id="notepad-content" style="width: 100%; height: calc(100% - 40px);">Cool version of notepad"</textarea>
+    </div>
+</div>
+        <div id="app1" class="app-window">
+            <div class="app-header" onmousedown="startDrag(event, 'app1')">
+                <span>Welcome App</span>
+                <div class="header-buttons">
+                    <span class="minimize-btn" onclick="minimizeApp('app1')">-</span>
+                    <span class="close-btn" onclick="closeApp('app1')">X</span>
+                </div>
+            </div>
+<!-- Add this inside the #desktop div -->
+      <div class="app-content">
+             
+Welcome to the Screeti OS! Explore around the computer and try out the different apps.
+
+Also please note that linia is still in development and this is just a prototype on what its gonna look like, so its gonna not have any features <div class="color-button" onclick="deleteSystem32()">                 Dont-click</div></div></p>
+            </div>
+        </div>
+<div id="clock" class="app-window">
+            <div class="app-header" onmousedown="startDrag(event, 'clock')">
+                <span>Welcome App</span>
+                <div class="header-buttons">
+                    <span class="minimize-btn" onclick="minimizeApp('clock')">-</span>
+                    <span class="close-btn" onclick="closeApp('clock')">X</span>
+                </div>
+            </div>
+<!-- Add this inside the #desktop div -->
+      <div class="app-content">
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="canvas" width="400" height="400" style="background-color:#333">
+Sorry, your browser does not support canvas.
+</canvas>
+
+<script>
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+let radius = canvas.height / 2;
+ctx.translate(radius, radius);
+radius = radius * 0.90
+setInterval(drawClock, 1000);
+
+function drawClock() {
+  drawFace(ctx, radius);
+  drawNumbers(ctx, radius);
+  drawTime(ctx, radius);
+}
+
+function drawFace(ctx, radius) {
+  const grad = ctx.createRadialGradient(0,0,radius*0.95, 0,0,radius*1.05);
+  grad.addColorStop(0, '#333');
+  grad.addColorStop(0.5, 'white');
+  grad.addColorStop(1, '#333');
+  ctx.beginPath();
+  ctx.arc(0, 0, radius, 0, 2*Math.PI);
+  ctx.fillStyle = 'white';
+  ctx.fill();
+  ctx.strokeStyle = grad;
+  ctx.lineWidth = radius*0.1;
+  ctx.stroke();
+  ctx.beginPath();
+  ctx.arc(0, 0, radius*0.1, 0, 2*Math.PI);
+  ctx.fillStyle = '#333';
+  ctx.fill();
+}
+
+function drawNumbers(ctx, radius) {
+  ctx.font = radius*0.15 + "px arial";
+  ctx.textBaseline="middle";
+  ctx.textAlign="center";
+  for(let num = 1; num < 13; num++){
+    let ang = num * Math.PI / 6;
+    ctx.rotate(ang);
+    ctx.translate(0, -radius*0.85);
+    ctx.rotate(-ang);
+    ctx.fillText(num.toString(), 0, 0);
+    ctx.rotate(ang);
+    ctx.translate(0, radius*0.85);
+    ctx.rotate(-ang);
+  }
+}
+
+function drawTime(ctx, radius){
+    const now = new Date();
+    let hour = now.getHours();
+    let minute = now.getMinutes();
+    let second = now.getSeconds();
+    //hour
+    hour=hour%12;
+    hour=(hour*Math.PI/6)+
+    (minute*Math.PI/(6*60))+
+    (second*Math.PI/(360*60));
+    drawHand(ctx, hour, radius*0.5, radius*0.07);
+    //minute
+    minute=(minute*Math.PI/30)+(second*Math.PI/(30*60));
+    drawHand(ctx, minute, radius*0.8, radius*0.07);
+    // second
+    second=(second*Math.PI/30);
+    drawHand(ctx, second, radius*0.9, radius*0.02);
+}
+
+function drawHand(ctx, pos, length, width) {
+    ctx.beginPath();
+    ctx.lineWidth = width;
+    ctx.lineCap = "round";
+    ctx.moveTo(0,0);
+    ctx.rotate(pos);
+    ctx.lineTo(0, -length);
+    ctx.stroke();
+    ctx.rotate(-pos);
+}
+</script>
+
+</body>
+</html>
+
+            </div>
+        </div>
+
+        <div id="idiot" class="app-window">
+            <div class="app-header" onmousedown="startDrag(event, 'idiot')">
+                <span>Welcome App</span>
+                <div class="header-buttons">
+                    <span class="minimize-btn" onclick="minimizeApp('idiot')">-</span>
+                    <span class="close-btn" onclick="closeApp('idiot')">X</span>
+                </div>
+            </div>
+<!-- Add this inside the #desktop div -->
+      <div class="app-content">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clickable Cloning Rectangles</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: #f0f0f0;
+        }
+        .rectangle {
+            position: absolute;
+             width: 400px;
+            height: 300px;
+            background: white;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 24px;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+<div class="rectangle" id="mainRectangle">Click me</div>
+
+<script>
+    function createRectangle() {
+        const rectangle = document.createElement('div');
+        rectangle.classList.add('rectangle');
+        rectangle.textContent = 'Catch me idiot';
+        document.body.appendChild(rectangle);
+        
+        let rectX = Math.random() * window.innerWidth;
+        let rectY = Math.random() * window.innerHeight;
+        let rectSpeedX = (Math.random() - 0.5) * 400;
+        let rectSpeedY = (Math.random() - 0.5) * 400;
+
+        function moveRectangle() {
+            rectX += rectSpeedX;
+            rectY += rectSpeedY;
+
+            if (rectX <= 0 || rectX + rectangle.clientWidth >= window.innerWidth) {
+                rectSpeedX *= -1;
+            }
+
+            if (rectY <= 0 || rectY + rectangle.clientHeight >= window.innerHeight) {
+                rectSpeedY *= -1;
+            }
+
+            rectangle.style.left = rectX + 'px';
+            rectangle.style.top = rectY + 'px';
+
+            requestAnimationFrame(moveRectangle);
+        }
+
+        moveRectangle();
+
+        rectangle.addEventListener('click', () => {
+            for (let i = 0; i < 3; i++) {
+                createRectangle();
+            }
+        });
+    }
+
+    document.getElementById('mainRectangle').addEventListener('click', function() {
+        for (let i = 0; i < 3; i++) {
+            createRectangle();
+        }
+    });
+
+</script>
+
+</body>
+</html>
+
+            </div>
+        </div>
+ <div id="quiz" class="app-window">
+            <div class="app-header" onmousedown="startDrag(event, 'quiz')">
+                <span>Screeti's Quiz</span>
+                <div class="header-buttons">
+                    <span class="minimize-btn" onclick="minimizeApp('quiz')">-</span>
+                    <span class="close-btn" onclick="closeApp('quiz')">X</span>
+                </div>
+            </div>
+<!-- Add this inside the #desktop div -->
+      <div class="app-content">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#quiz-container {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+}
+
+#score-container {
+    margin-bottom: 20px;
+}
+
+#question-container {
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: block;
+    background: #007BFF;
+    color: white;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #DE3163;
+}
+
+.hide {
+    display: none;
+}
+#dark-mode-toggle {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+}
+#app {
+    padding: 20px;
+}
+.dark-mode {
+  background-color: black;
+  color: black;
+}
+</style>
+</head>
+<body>
+    <div id="quiz-container">
+        <div id="score-container">
+            <h3>Score: <span id="current-score">0</span></h3>
+        </div>
+ <button id="dark-mode-toggle">Opened Quiz</button>
+        <div id="question-container">
+            <h2 id="question">Question goes here</h2>
+            <div id="answers">
+                <button class="btn">Answer 1</button>
+                <button class="btn">Answer 2</button>
+                <button class="btn">Answer 3</button>
+                <button class="btn">Answer 4</button>
+            </div>
+        </div>
+        <div id="result-container" class="hide">
+            <h2>Your Final Score: <span id="final-score"></span></h2>
+            <button id="restart-btn" class="btn">Restart Quiz</button>
+            <button id="retry-btn" class="btn hide">Retry Quiz</button>
+        </div>
+<div id="wrong-answers-container"></div>
+
+    </div>
+    <script> const questionContainer = document.getElementById('question-container');
+const resultContainer = document.getElementById('result-container');
+const questionElement = document.getElementById('question');
+const answerButtons = document.querySelectorAll('.btn');
+const currentScoreElement = document.getElementById('current-score');
+const finalScoreElement = document.getElementById('final-score');
+const restartButton = document.getElementById('restart-btn');
+const retryButton = document.getElementById('retry-btn');
+const darkModeToggle = document.getElementById('dark-mode-toggle');
+
+let currentQuestionIndex = 0;
+let score = 0;
+
+const questions = [
+     {
+        question: "What is the 12th letter of the Alphabet",
+        answers: ["L", "B", "M", "N"],
+        correct: 0
+    },
+    {
+        question: "What is the capital of France?",
+        answers: ["Paris", "London", "Rome", "Berlin"],
+        correct: 0
+    },
+    {
+        question: "What is 2 + 2?",
+        answers: ["3", "4", "5", "6"],
+        correct: 1
+    },
+    {
+        question: "What is 819 + 362?",
+        answers: ["2025","4", "296478", "296473"],
+        correct: 2
+    },
+    {
+        question: "What is the capital of Japan?",
+        answers: ["Japan", "Beijing", "Tokyo", "Moscow"],
+        correct: 2
+    },
+    {
+        question: "What is the largest ocean on Earth?",
+        answers: ["Atlantic", "Indian", "Arctic", "Pacific"],
+        correct: 3
+    },
+    {
+        question: "Who wrote 'To Kill a Mockingbird'?",
+        answers: ["Harper Lee", "Mark Twain", "Ernest Hemingway", "J.K. Rowling"],
+        correct: 0
+    },
+    {
+        question: "What is the chemical symbol for gold?",
+        answers: ["Au", "Ag", "Pb", "Fe"],
+        correct: 0
+    },
+    {
+        question: "Which planet is known as the Red Planet?",
+        answers: ["Venus", "Mars", "Jupiter", "Saturn"],
+        correct: 1
+    },
+    {
+        question: "Who painted the Mona Lisa?",
+        answers: ["Vincent van Gogh", "Claude Monet", "Leonardo da Vinci", "Pablo Picasso"],
+        correct: 2
+    },
+    {
+        question: "What is the hardest natural substance on Earth?",
+        answers: ["Gold", "Iron", "Diamond", "Platinum"],
+        correct: 2
+    },
+    {
+        question: "What year did the Titanic sink?",
+        answers: ["1905", "1912", "1918", "1923"],
+        correct: 1
+    },
+    {
+        question: "What is the capital of Australia?",
+        answers: ["Sydney", "Melbourne", "Canberra", "Brisbane"],
+        correct: 2
+    },
+    {
+        question: "Who discovered penicillin?",
+        answers: ["Alexander Fleming", "Marie Curie", "Louis Pasteur", "Isaac Newton"],
+        correct: 0
+    },
+    {
+        question: "What is the largest planet in our solar system?",
+        answers: ["Earth", "Mars", "Jupiter", "Saturn"],
+        correct: 2
+    },
+    {
+        question: "Which element has the atomic number 1?",
+        answers: ["Helium", "Oxygen", "Hydrogen", "Carbon"],
+        correct: 2
+    },
+    {
+        question: "What is the capital of Canada?",
+        answers: ["Toronto", "Vancouver", "Montreal", "Ottawa"],
+        correct: 3
+    },
+    {
+        question: "In what country would you find the Great Pyramid of Giza?",
+        answers: ["Greece", "Egypt", "Iraq", "Turkey"],
+        correct: 1
+    },
+    {
+        question: "Who wrote 'Pride and Prejudice'?",
+        answers: ["Jane Austen", "Emily Brontë", "Charlotte Brontë", "Mary Shelley"],
+        correct: 0
+    },
+    {
+        question: "What is the smallest planet in our solar system?",
+        answers: ["Mercury", "Mars", "Earth", "Venus"],
+        correct: 0
+    },
+    {
+        question: "Which sea is the saltiest?",
+        answers: ["Mediterranean Sea", "Dead Sea", "Red Sea", "Baltic Sea"],
+        correct: 1
+    },
+    {
+        question: "What is the largest desert in the world?",
+        answers: ["Sahara", "Gobi", "Antarctic Desert", "Arabian Desert"],
+        correct: 2
+    },
+    {
+        question: "Who is known as the Father of Computers?",
+        answers: ["Alan Turing", "Charles Babbage", "Ada Lovelace", "John von Neumann"],
+        correct: 1
+    },
+    {
+        question: "What is the most spoken language in the world?",
+        answers: ["English", "Mandarin", "Spanish", "Hindi"],
+        correct: 1
+    },
+    {
+        question: "What is the capital of Brazil?",
+        answers: ["São Paulo", "Rio de Janeiro", "Brasília", "Salvador"],
+        correct: 2
+    },
+    {
+        question: "Which animal is known as the King of the Jungle?",
+        answers: ["Tiger", "Elephant", "Lion", "Bear"],
+        correct: 2
+    },
+    {
+        question: "Who wrote the play 'Romeo and Juliet'?",
+        answers: ["William Shakespeare", "Christopher Marlowe", "Ben Jonson", "John Milton"],
+        correct: 0
+    },
+    {
+        question: "What is the main ingredient in guacamole?",
+        answers: ["Tomato", "Onion", "Avocado", "Pepper"],
+        correct: 2
+    },
+    {
+        question: "Which country is known as the Land of the Rising Sun?",
+        answers: ["China", "South Korea", "Japan", "Thailand"],
+        correct: 2
+    },
+    {
+        question: "What is the chemical symbol for water?",
+        answers: ["O2", "H2O", "CO2", "NaCl"],
+        correct: 1
+    },
+    {
+        question: "Who painted the Sistine Chapel ceiling?",
+        answers: ["Leonardo da Vinci", "Vincent van Gogh", "Michelangelo", "Raphael"],
+        correct: 2
+    },
+    {
+        question: "What is the largest island in the world?",
+        answers: ["New Guinea", "Greenland", "Borneo", "Madagascar"],
+        correct: 1
+    },
+    {
+        question: "Which planet is closest to the Sun?",
+        answers: ["Venus", "Earth", "Mercury", "Mars"],
+        correct: 2
+    },
+    {
+        question: "What is the smallest unit of life?",
+        answers: ["Cell", "Molecule", "Atom", "Organism"],
+        correct: 0
+    },
+    {
+        question: "Who was the first person to walk on the Moon?",
+        answers: ["Buzz Aldrin", "Neil Armstrong", "Yuri Gagarin", "Michael Collins"],
+        correct: 1
+    },
+    {
+        question: "Which continent is the Sahara Desert located in?",
+        answers: ["Asia", "Europe", "Africa", "Australia"],
+        correct: 2
+    },
+    {
+        question: "What is the name of our galaxy?",
+        answers: ["Andromeda", "Milky Way", "Triangulum", "Whirlpool"],
+        correct: 1
+    },
+    {
+        question: "What is the largest mammal in the world?",
+        answers: ["African Elephant", "Blue Whale", "Giraffe", "Hippopotamus"],
+        correct: 1
+    },
+    {
+        question: "Which vitamin is known as the sunshine vitamin?",
+        answers: ["Vitamin A", "Vitamin C", "Vitamin D", "Vitamin E"],
+        correct: 2
+    },
+    {
+        question: "What is the most abundant gas in the Earth's atmosphere?",
+        answers: ["Oxygen", "Hydrogen", "Nitrogen", "Carbon Dioxide"],
+        correct: 2
+    },
+    {
+        question: "Which instrument measures atmospheric pressure?",
+        answers: ["Thermometer", "Barometer", "Hygrometer", "Altimeter"],
+        correct: 1
+    },
+    {
+        question: "What is the capital of Germany?",
+        answers: ["Berlin", "Munich", "Frankfurt", "Hamburg"],
+        correct: 0
+    },
+    {
+        question: "Who wrote '1984'?",
+        answers: ["Aldous Huxley", "George Orwell", "Ray Bradbury", "H.G. Wells"],
+        correct: 1
+    },
+    {
+        question: "What is the longest river in the world?",
+        answers: ["Amazon", "Nile", "Yangtze", "Mississippi"],
+        correct: 1
+    },
+    {
+        question: "What is the currency used in Japan?",
+        answers: ["Yuan", "Won", "Yen", "Ringgit"],
+        correct: 2
+    },
+    {
+        question: "What is the smallest country in the world?",
+        answers: ["San Marino", "Liechtenstein", "Monaco", "Vatican City"],
+        correct: 3
+    },
+    {
+        question: "Which animal is the largest living bird?",
+        answers: ["Ostrich", "Emu", "Penguin", "Albatross"],
+        correct: 0
+    },
+    {
+        question: "Which organ in the human body is responsible for pumping blood?",
+        answers: ["Liver", "Kidney", "Lung", "Heart"],
+        correct: 3
+    },
+    {
+        question: "Who is known for the theory of relativity?",
+        answers: ["Isaac Newton", "Niels Bohr", "Albert Einstein", "Galileo Galilei"],
+        correct: 2
+    },
+    {
+        question: "What is the largest volcano in the solar system?",
+        answers: ["Mount St. Helens", "Mount Fuji", "Olympus Mons", "Kilauea"],
+        correct: 2
+    },
+    {
+        question: "What element is diamond made of?",
+        answers: ["Carbon", "Silicon", "Aluminum", "Iron"],
+        correct: 0
+    },
+    {
+        question: "Who was the first President of the United States?",
+        answers: ["Thomas Jefferson", "John Adams", "Abraham Lincoln", "George Washington"],
+        correct: 3
+    },
+    {
+        question: "What is the largest city in the United States by population?",
+        answers: ["Los Angeles", "Chicago", "Houston", "New York City"],
+        correct: 3
+    },
+    {
+        question: "Which planet is known as the Morning Star?",
+        answers: ["Venus", "Mercury", "Mars", "Saturn"],
+        correct: 0
+    },
+    {
+        question: "What is the name of the first artificial Earth satellite?",
+        answers: ["Sputnik 1", "Apollo 11", "Hubble", "Voyager 1"],
+        correct: 0
+    },
+    {
+        question: "Which ocean is the largest?",
+        answers: ["Atlantic Ocean", "Indian Ocean", "Arctic Ocean", "Pacific Ocean"],
+        correct: 3
+    },
+    {
+        question: "What is the main language spoken in Brazil?",
+        answers: ["Spanish", "Portuguese", "French", "English"],
+        correct: 1
+    },
+    {
+        question: "Which country is known as the Land of Fire and Ice?",
+        answers: ["Norway", "Iceland", "New Zealand", "Sweden"],
+        correct: 1
+    },
+    {
+        question: "What is the capital city of Italy?",
+        answers: ["Milan", "Naples", "Rome", "Venice"],
+        correct: 2
+    },
+    {
+        question: "What is the chemical symbol for silver?",
+        answers: ["Ag", "Au", "Pb", "Fe"],
+        correct: 0
+    },
+    {
+        question: "Who developed the theory of evolution by natural selection?",
+        answers: ["Gregor Mendel", "Charles Darwin", "Louis Pasteur", "Albert Einstein"],
+        correct: 1
+    },
+    {
+        question: "What is the largest land animal?",
+        answers: ["African Elephant", "Giraffe", "White Rhinoceros", "Hippopotamus"],
+        correct: 0
+    },
+    {
+        question: "What is the official language of the United Nations?",
+        answers: ["English", "French", "Spanish", "All of the above"],
+        correct: 3
+    },
+    {
+        question: "What is the smallest bone in the human body?",
+        answers: ["Stapes", "Hammer", "Anvil", "Radius"],
+        correct: 0
+    }
+];
+
+function startQuiz() {
+    currentQuestionIndex = 0;
+    score = 0;
+    updateScore();
+    resultContainer.classList.add('hide');
+    questionContainer.classList.remove('hide');
+    shuffleQuestions();
+    showQuestion();
+}
+
+function shuffleQuestions() {
+    // Shuffle questions array
+    for (let i = questions.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [questions[i], questions[j]] = [questions[j], questions[i]];
+    }
+}
+
+function showQuestion() {
+    const question = questions[currentQuestionIndex];
+    questionElement.textContent = question.question;
+    const answers = [...question.answers];
+    shuffleArray(answers);
+    answerButtons.forEach((button, index) => {
+        button.textContent = answers[index];
+        button.onclick = () => selectAnswer(answers[index]);
+    });
+}
+
+function shuffleArray(array) {
+    // Shuffle array
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+}
+
+function selectAnswer(selectedAnswer) {
+    const question = questions[currentQuestionIndex];
+    if (question.answers.indexOf(selectedAnswer) === question.correct) {
+        score++;
+        updateScore();
+    }
+    currentQuestionIndex++;
+    if (currentQuestionIndex < questions.length) {
+        showQuestion();
+    } else {
+        endQuiz();
+    }
+}
+
+function updateScore() {
+    currentScoreElement.textContent = score;
+}
+
+function endQuiz() {
+    questionContainer.classList.add('hide');
+    resultContainer.classList.remove('hide');
+    finalScoreElement.textContent = `${score} out of ${questions.length}`;
+ // Display wrong answers
+    if (wrongAnswers.length > 0) {
+        wrongAnswersContainer.innerHTML = '<h3>You got the following questions wrong:</h3>';
+        wrongAnswers.forEach(answer => {
+            wrongAnswersContainer.innerHTML += `
+                <p>Question: ${answer.question}<br>
+                Your Answer: ${answer.selectedAnswer}<br>
+                Correct Answer: ${answer.correctAnswer}</p>
+            `;
+        });
+    } else {
+        wrongAnswersContainer.innerHTML = '<h3>Congratulations! You got all the questions right!</h3>';
+    }
+    retryButton.classList.remove('hide');
+}
+
+function reloadPage() {
+    location.reload(); // Reload the current page
+}
+function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+}
+
+restartButton.onclick = startQuiz;
+retryButton.onclick = reloadPage;
+darkModeToggle.onclick = toggleDarkMode;
+
+startQuiz();
+</script>
+</body>
+</html>
+
+            </div>
+        </div>
+
+ <div id="game" class="app-window">
+            <div class="app-header" onmousedown="startDrag(event, 'game')">
+                <span>Pop catch!</span>
+                <div class="header-buttons">
+                    <span class="minimize-btn" onclick="minimizeApp('game')">-</span>
+        <span class="maximize-btn">[ ]</span>
+
+                    <span class="close-btn" onclick="closeApp('game')">X</span>
+                </div>
+            </div>
+<!-- Add this inside the #desktop div -->
+      <div class="app-content">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catch the Falling Objects Game</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: #f0f0f0;
+        }
+        canvas {
+            display: block;
+            margin: auto;
+            background-color: #87CEEB;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="gameCanvas"></canvas>
+<audio id="hitSound" src="pop.mp3"></audio>
+    <script>
+        const canvas = document.getElementById('gameCanvas');
+        const ctx = canvas.getContext('2d');
+
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        const basket = {
+            x: canvas.width / 2 - 50,
+            y: canvas.height - 50,
+            width: 100,
+            height: 20,
+            speed: 5,
+            dx: 0
+        };
+
+        const objects = [];
+        let score = 0;
+        let spawnRate = 0.35;
+        let spawnRateRed = 0;
+        let bgColor = {r: 135, g: 206, b: 235}; // Initial SkyBlue color
+        let framesPerSecond = 60;
+        let transitionFrames = framesPerSecond * 20; // Approx. 20 seconds
+
+        function createObject() {
+            const size = Math.random() * 20 + 10;
+            const isRedSquare = Math.random() < spawnRateRed;
+            if (isRedSquare) {
+                objects.push({
+                    x: Math.random() * (canvas.width - size),
+                    y: -size,
+                    size: size,
+                    speed: Math.random() * 5 + 2,
+                    type: 'red'
+                });
+            } else {
+                objects.push({
+                    x: Math.random() * (canvas.width - size),
+                    y: -size,
+                    size: size,
+                    speed: Math.random() * 5 + 2,
+                    type: 'normal'
+                });
+            }
+        }
+
+        function updateBasketPosition() {
+            basket.x += basket.dx;
+
+            // Prevent the basket from moving out of bounds
+            if (basket.x < 0) basket.x = 0;
+            if (basket.x + basket.width > canvas.width) basket.x = canvas.width - basket.width;
+        }
+
+        function updateBackgroundColor() {
+            if (score >= 24 && score <= 50) {
+                // Gradually change to reddish color
+                let progress = (score - 24) / (50 - 24);
+                bgColor.r = Math.min(255, 135 + progress * (255 - 135));
+                bgColor.g = Math.max(0, 206 - progress * 206);
+                bgColor.b = Math.max(0, 235 - progress * 235);
+            } else if (score >= 51 && score <= 80) {
+                // Gradually change to purplish color
+                let progress = (score - 51) / (80 - 51);
+                bgColor.r = Math.max(128, 255 - progress * (255 - 128));
+                bgColor.g = Math.max(0, progress * 0);
+                bgColor.b = Math.min(255, 0 + progress * 255);
+            } else if (score >= 100 && score <= 150) {
+                // Gradually change to orange color
+                let progress = (score - 100) / (150 - 100);
+                bgColor.r = Math.min(255, 255);
+                bgColor.g = Math.min(165, 165);
+                bgColor.b = Math.min(0, 0);
+            } else if (score >= 260 && score < 300) {
+                // Gradually change to dark blue
+                let progress = (score - 260) / (300 - 260);
+                bgColor.r = Math.max(0, 0);
+                bgColor.g = Math.max(0, 0);
+                bgColor.b = Math.min(139, 139);
+           } else if (score >= 350 && score <= 420) {
+                // Gradually change to purplish color
+                let progress = (score - 51) / (80 - 51);
+                bgColor.r = Math.max(128, 255 - progress * (255 - 128));
+                bgColor.g = Math.max(0, progress * 0);
+                bgColor.b = Math.min(255, 0 + progress * 255);
+            
+ } else if (score >= 650 && score <= 695) {
+                // Gradually change to greenlish color
+                let progress = (score - 51) / (80 - 51);
+                bgColor.r = Math.max(0, progress * 0);
+                bgColor.g = Math.max(255, 0 + progress * 255);
+                bgColor.b = Math.min(128, 0 + progress * 128);
+ } else if (score >= 780 && score <= 890) {
+                // Gradually change to redlish color
+                let progress = (score - 780) / (890 - 780);
+                bgColor.r = Math.max(128, 135 +  progress * (135 - 128));
+                bgColor.g = Math.max(0, 0 + progress * 0);
+                bgColor.b = Math.min(0, 0 + progress * 0);
+
+
+            }
+
+            canvas.style.backgroundColor = `rgb(${bgColor.r}, ${bgColor.g}, ${bgColor.b})`;
+        }
+
+        function updateGame() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            if (score >= 1000) {
+                ctx.fillStyle = '#000';
+                ctx.font = '48px Arial';
+                ctx.textAlign = 'center';
+                ctx.fillText('You Win!', canvas.width / 2, canvas.height / 2);
+                return; // Stop the game loop
+            }
+
+            // Draw basket
+            ctx.fillStyle = '#FF6347';
+            ctx.fillRect(basket.x, basket.y, basket.width, basket.height);
+
+            // Draw and move objects
+            objects.forEach((object, index) => {
+                object.y += object.speed;
+                ctx.fillStyle = object.type === 'red' ? '#FF0000' : '#FFD700';
+                if (object.type === 'red') {
+                    ctx.fillRect(object.x, object.y, object.size, object.size);
+                } else {
+                    ctx.beginPath();
+                    ctx.arc(object.x, object.y, object.size, 0, Math.PI * 2);
+                    ctx.fill();
+                    ctx.closePath();
+                }
+
+                // Check if object is caught
+                if (
+                    object.y + object.size > basket.y &&
+                    object.x > basket.x &&
+                    object.x < basket.x + basket.width
+                ) {
+                    objects.splice(index, 1);
+                    hitSound.currentTime = 0; // Reset sound for quick replay
+                    hitSound.play();
+                    if (object.type === 'red') {
+                        score -= 10;
+                    } else {
+                        score += 1;
+                    }
+
+                    // Update spawn rate at specific scores
+                    if (score === 20) {
+                        spawnRate = 0.10;
+                    } if (score === 80) {
+                        spawnRate = 0.20;
+                    } else if (score === 90) {
+                        spawnRate = 0.10;
+                        spawnRateRed = 0.05;
+                    } else if (score === 130) {
+                        spawnRateRed = 0.17;
+                    } else if (score === 250) {
+                        spawnRateRed = 0.19;
+                    } else if (score === 260) {
+                        spawnRate = 0.20;
+                    } else if (score === 290) {
+                        spawnRate = 0.03;
+                          spawnRateRed = 0.21;
+                    } else if (score === 350) {
+                        spawnRate = 0.01;
+                          spawnRateRed = 0.24;
+                    } else if (score === 360) {
+                        spawnRate = 0.21;
+                          spawnRateRed = 0.14;
+                    } else if (score === 375) {
+                        spawnRate = 0.02;
+                          spawnRateRed = 0.54;
+                     } else if (score === 400) {
+                        spawnRate = 0.11;
+                          spawnRateRed = 0.59;
+                    } else if (score === 450) {
+                        spawnRateRed = 0.09;
+                     } else if (score === 460) {
+                        spawnRate = 0.31;
+                          spawnRateRed = 0.34
+                     } else if (score === 480) {
+                        spawnRate = 0.035;
+                          spawnRateRed = 0.39;
+                     } else if (score === 550) {
+                        spawnRate = 0.51;
+                          spawnRateRed = 0.27
+                     } else if (score === 580) {
+                        spawnRate = 0.035;
+                          spawnRateRed = 0.24;
+                     } else if (score === 600) {
+                        spawnRate = 0.51;
+                          spawnRateRed = 0.20
+                     } else if (score === 605) {
+                        spawnRate = 0.03;
+                          spawnRateRed = 0.21
+                     } else if (score === 630) {
+                        spawnRate = 0.025;
+                          spawnRateRed = 0.65
+                    } else if (score === 730) {
+                        spawnRate = 0.055;
+                          spawnRateRed = 0.25
+                    } else if (score === 740) {
+                        spawnRate = 0.025;
+                          spawnRateRed = 0.50
+                    } else if (score === 800) {
+                        spawnRate = 0.025;
+                          spawnRateRed = 0.60
+                    } else if (score === 890) {
+                        spawnRate = 0.025;
+                          spawnRateRed = 0.10
+                    } else if (score === 900) {
+                        spawnRate = 0.015;
+                          spawnRateRed = 0.50
+                    } else if (score === 920) {
+                        spawnRate = 0.012;
+                          spawnRateRed = 0.52
+                    } else if (score === 980) {
+                        spawnRate = 0.012;
+                          spawnRateRed = 0.62
+                   } else if (score === 990) {
+                        spawnRate = 0.01;
+                          spawnRateRed = 0.72
+
+                    }
+                   
+                }
+
+                // Remove object if it falls off the screen
+                if (object.y > canvas.height) {
+                    objects.splice(index, 1);
+                }
+            });
+
+            // Display score
+            ctx.fillStyle = '#000';
+            ctx.font = '24px Arial';
+            ctx.fillText('Score: ' + score, 10, 30);
+
+            // Create new objects
+            if (Math.random() < spawnRate) {
+                createObject();
+            }
+
+            updateBasketPosition();
+            updateBackgroundColor();
+
+            requestAnimationFrame(updateGame);
+        }
+
+        function handleKeyDown(event) {
+            if (event.key === 'ArrowLeft' || event.key === 'a') {
+                basket.dx = -basket.speed;
+            }
+            if (event.key === 'ArrowRight' || event.key === 'd') {
+                basket.dx = basket.speed;
+            }
+  
+        }
+
+        function handleKeyUp(event) {
+            if (
+                (event.key === 'ArrowLeft' || event.key === 'a') && basket.dx < 0 ||
+                (event.key === 'ArrowRight' || event.key === 'd') && basket.dx > 0
+            ) {
+                basket.dx = 0;
+            }
+        }
+
+        document.addEventListener('keydown', handleKeyDown);
+        document.addEventListener('keyup', handleKeyUp);
+
+        updateGame();
+    </script>
+</body>
+</html>
+
+            </div>
+        </div>
+
+
+        <div id="secret" class="app-window">
+            <div class="app-header" onmousedown="startDrag(event, 'secret')">
+                <span>restart.exe</span>
+                <div class="header-buttons">
+                    <span class="minimize-btn" onclick="minimizeApp('secret')">-</span>
+                    <span class="close-btn" onclick="closeApp('secret')">X</span>
+                </div>
+            </div>
+<!-- Add this inside the #desktop div -->
+      <div class="app-content">
+                
+                        <h1 style="color: white; text-align: 100; margin-top: 0vh;">You do not have permission to restart!‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎  ‎ ‎ ‎  ‎ ‎ ‎  ‎ ‎ ‎  ‎ ‎ ‎  ‎ ‎ ‎  ‎ ‎ ‎  ‎ ‎ ‎  ‎ ‎ ‎  ‎ ‎ ‎  ‎ ‎ ‎  ‎ ‎ ‎  ‎ ‎ ‎  ‎ ‎ ‎  ‎ ‎ ‎  ‎ ‎ ‎  ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎
+<button class="action-button" onclick="restartfake()">Restart</button> ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  </h1>
+            </div>
+        </div>
+<div id="linia" class="app-window">
+    <div class="app-header" onmousedown="startDrag(event, 'linia')">
+        <span>Linia Browser</span>
+        <div class="header-buttons">
+            <span class="minimize-btn" onclick="minimizeApp('linia')">-</span>
+<span class="maximize-btn">[ ]</span>
+            <span class="close-btn" onclick="closeApp('linia')">X</span>
+        </div>
+    </div>
+    <div class="app-content">
+        <div class="browser-toolbar">
+Linia is not available right now...
+
+            <button onclick="loadLiniaPage()"></button>
+        </div>
+        <iframe id="linia-frame" src="about:blank" style="width: 100%; height: calc(100% - 40px); border: none;"></iframe>
+    </div>
+</div>
+        <div id="app2" class="app-window">
+            <div class="app-header" onmousedown="startDrag(event, 'app2')">
+                <span>Color Changer</span>
+                <div class="header-buttons">
+                    <span class="minimize-btn" onclick="minimizeApp('app2')">-</span>
+<span class="maximize-btn">[ ]</span>
+                    <span class="close-btn" onclick="closeApp('app2')">X</span>
+                </div>
+            </div>
+            <div class="app-content">
+
+ <p><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Wheel Background Changer</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        #colorPicker {
+            -webkit-appearance: none;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            cursor: pointer;
+            border: none;
+        }
+        #colorPicker::-webkit-color-swatch-wrapper {
+            padding: 0;
+        }
+        #colorPicker::-webkit-color-swatch {
+            border: none;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <input type="color" id="colorPicker">
+    <script>
+        const colorPicker = document.getElementById('colorPicker');
+        colorPicker.addEventListener('input', (event) => {
+            document.body.style.backgroundColor = event.target.value;
+        });
+    </script>
+</body>
+</html>
+
+            </div>
+        </div>
+
+
+            </div>
+        </div>
+ <div id="TASG" class="app-window">
+            <div class="app-header" onmousedown="startDrag(event, 'TASG')">
+                <span>Taskbar settings</span>
+                <div class="header-buttons">
+                    <span class="minimize-btn" onclick="minimizeApp('TASG')">-</span>
+<span class="maximize-btn">{}</span>
+                    <span class="close-btn" onclick="closeApp('TASG')">X</span>
+                </div>
+            </div>
+            <div class="app-content">
+                <p> <div class="color-button" onclick="disabletaskbar()" style="background: black; color: White;">                Disable</div>
+<div class="color-button" onclick="enabletaskbar()" style="background: white; color: black;">                Enable</div> <div class="color-button" onclick="okokok()" style="background: white; color: black;">                up</div>  </p>
+            </div>
+        </div>
+<div id="SSP" class="app-window">
+            <div class="app-header" onmousedown="startDrag(event, 'SSP')">
+                <span>System settings personalization</span>
+                <div class="header-buttons">
+                    <span class="minimize-btn" onclick="minimizeApp('SSP')">-</span>
+<span class="maximize-btn">{}</span>
+                    <span class="close-btn" onclick="closeApp('SSP')">X</span>
+                </div>
+            </div>
+            <div class="app-content">
+                <p> Command-prompt personalization: <div class="color-button" onclick="cmdchange('white')" style="background: white; color: gray;">                white mode</div> <div class="color-button" onclick="cmdchange('black')" style="background: black; color: White;">                dark mode</div> Start menu personalization: <div class="color-button" onclick="startchange('white')" style="background: white; color: gray;">                white mode</div> <div class="color-button" onclick="startchange('gray')" style="background: black; color: White;">                dark mode</div>
+<div class="color-button" onclick="startchange2()" style="background: white; color: black;">                white text mode</div><div class="color-button" onclick="changedesktopfont('Segoe UI')" style="background: black; color: White;">               System font1</div> <div class="color-button" onclick="changedesktopfont('Trebuchet MS')" style="background: black; color: White;">               System font2</div> <div class="color-button" onclick="openApp('SSPMF')" style="background: black; color: White;">               More fonts</div></p>
+            </div>
+        </div>
+<div id="SSPMF" class="app-window">
+            <div class="app-header" onmousedown="startDrag(event, 'SSPMF')">
+                <span>System settings personalization</span>
+                <div class="header-buttons">
+                    <span class="minimize-btn" onclick="minimizeApp('SSPMF')">-</span>
+<span class="maximize-btn">{}</span>
+                    <span class="close-btn" onclick="closeApp('SSPMF')">X</span>
+                </div>
+            </div>
+            <div class="app-content">
+                <p><div class="color-button" onclick="changedesktopfont('Segoe UI')" style="background: black; color: White;">               System font1</div>
+<div class="color-button" onclick="changedesktopfont('Trebuchet MS')" style="background: black; color: White;">               System font2</div><div class="color-button" onclick="changedesktopfont('Courier New')" style="background: white; color: red;">               font: Courier new</div><div class="color-button" onclick="changedesktopfont('Times New Roman')" style="background: white; color: black;">               font: Brush script</div><div class="color-button" onclick="changedesktopfont('Garamond')" style="background: white; color: red;">               font: Garamond</div></p>
+            </div>
+        </div>
+ 
+        <div id="app3" class="app-window">
+            <div class="app-header" onmousedown="startDrag(event, 'app3')">
+                <span>System Options</span>
+                <div class="header-buttons">
+                    <span class="minimize-btn" onclick="minimizeApp('app3')">-</span>
+<span class="maximize-btn">[ ]</span>
+                    <span class="close-btn" onclick="closeApp('app3')">X</span>
+                </div>
+            </div>
+            <div class="app-content">
+                <button class="action-button" onclick="shutdown()">Shutdown</button>
+ <button class="action-button" onclick="restart()">Restart</button>
+<p>Games so far:</p>
+<div class="color-button" onclick="openApp('tic-tac-toe')">Tic tac toe</div>
+<div class="color-button" onclick="openApp('game')">Pop Catch!</div>
+</div>
+<div class="action-button" onclick="openApp('settings')">More options</div>
+            </div>
+        </div>
+               <div id="store" class="app-window">
+    <div class="app-header" onmousedown="startDrag(event, 'store')">
+        <span>Screeti Store</span>
+        <div class="header-buttons">
+            <span class="minimize-btn" onclick="minimizeApp('store')">-</span>
+            <span class="close-btn" onclick="closeApp('store')">X</span>
+        </div>
+    </div>
+    <div class="app-content">
+        <div class="store-item">
+            <p> nothing here yet :( </p>
+            <button onclick="startDownload()">Download</button>
+            <div id="progress-bar" style="display:none;">
+                <div id="progress"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        <div id="file-explorer" class="app-window">
+            <div class="app-header" onmousedown="startDrag(event, 'file-explorer')">
+                <span>File Explorer</span>
+                <div class="header-buttons">
+                    <span class="minimize-btn" onclick="minimizeApp('file-explorer')">-</span>
+<span class="maximize-btn">[ ]</span>
+                    <span class="close-btn" onclick="closeApp('file-explorer')">X</span>
+                </div>
+            </div>
+            <div class="app-content" id="file-explorer-content">
+                <div class="menu-item" onclick="openNotepad()">Notepad</div>
+                <div class="folder" onclick="openFolder('documents')">📁Documents</div>
+                <div class="folder" onclick="openFolder('downloads')">📁Downloads</div>
+                <div class="folder" onclick="openFolder('pictures')">📁Pictures</div>
+                <div class="folder" onclick="openFolder('system32')">📁System32</div>
+                <div class="menu-item" onclick="openApp('tic-tac-toe')">📁Tic Tac Toe</div>
+            </div>
+        </div>
+        <div id="settings" class="app-window">
+    <div class="app-header" onmousedown="startDrag(event, 'settings')">
+        <span>System settings</span>
+        <div class="header-buttons">
+            <span class="minimize-btn" onclick="minimizeApp('settings')">-</span>
+<span class="maximize-btn">[]</span>
+            <span class="close-btn" onclick="closeApp('settings')">X</span>
+        </div>
+    </div>
+    <div class="app-content" id="settings">
+    <p> Settings:fullscreen for more settings‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ 
+Change system wallpaper:<div class="action-button" onclick="openApp('app2')">Color Changer</div>  
+
+system storage: an error has occured ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ 
+<div class="action-button" onclick="openApp('TASG')">Taskbar settings</div> 
+<div class="action-button" onclick="openApp('SSP')">Personalization</div> 
+<div class="action-button" onclick="changeBackgroundwallpaper('sunrise.jpg')">Sunrise</div> 
+</p>
+</div>
+</div>
+
+<div id="command-prompt" class="app-window">
+    <div class="app-header" onmousedown="startDrag(event, 'command-prompt')">
+        <span>Command Prompt</span>
+        <div class="header-buttons">
+<span class="maximize-btn">[]</span>
+            <span class="minimize-btn" onclick="minimizeApp('command-prompt')">-</span>
+            <span class="close-btn" onclick="closeApp('command-prompt')">X</span>
+        </div>
+    </div>
+    <div class="app-content" id="command-prompt-content">
+        <div id="command-output"></div>
+        <input type="text" id="command-input" placeholder="Enter command...">
+        <button onclick="executeCommand()">Execute Command</button>
+    </div>
+
+</div>
+        <div id="task-manager" class="app-window">
+            <div class="app-header" onmousedown="startDrag(event, 'task-manager')">
+                <span>Task Manager</span>
+                <div class="header-buttons">
+                    <span class="minimize-btn" onclick="minimizeApp('task-manager')">-</span>
+<span class="maximize-btn">[]</span>
+                    <span class="close-btn" onclick="closeApp('task-manager')">X</span>
+                </div>
+            </div>
+            <div class="app-content" id="task-manager-content">
+                <!-- Content will be dynamically populated with running processes -->
+            </div>
+        </div>
+    </div>
+    <div id="shutdown-screen" class="overlay" style="display:none;">
+        <div class="overlay-content">
+            <p>Shutting down...</p>
+        </div>
+    </div>
+
+    <div id="restart-screen" class="overlay" style="display:none;">
+        <div class="overlay-content">
+<p>Restarting...</p>
+        </div>
+</div>
+
+
+    <script>
+        let runningProcesses = []; // Array to store running processes
+
+        function openApp(appId) {
+            document.getElementById(appId).style.display = 'flex';
+            if (!runningProcesses.includes(appId)) {
+                runningProcesses.push(appId);
+                updateTaskManager();
+            }
+        }
+
+        function closeApp(appId) {
+            document.getElementById(appId).style.display = 'none';
+            runningProcesses = runningProcesses.filter(process => process !== appId);
+            updateTaskManager();
+        }
+
+        function minimizeApp(appId) {
+            document.getElementById(appId).style.display = 'none';
+        }
+
+        function startDrag(event, appId) {
+            const app = document.getElementById(appId);
+            let offsetX = event.clientX - app.offsetLeft;
+            let offsetY = event.clientY - app.offsetTop;
+
+            function onMouseMove(e) {
+                app.style.left = `${e.clientX - offsetX}px`;
+                app.style.top = `${e.clientY - offsetY}px`;
+            }
+
+            function onMouseUp() {
+                document.removeEventListener('mousemove', onMouseMove);
+                document.removeEventListener('mouseup', onMouseUp);
+            }
+
+            document.addEventListener('mousemove', onMouseMove);
+            document.addEventListener('mouseup', onMouseUp);
+        }
+
+        function changeBackgroundColor(color) {
+            document.getElementById('desktop').style.backgroundColor = color;
+        }
+  function changeBackgroundwallpaper(url) {
+            document.getElementById('desktop').style.background = url;
+        }
+ function changedesktopfont(font) {
+            document.getElementById('desktop').style.fontFamily = font;
+        }
+        function changeTB(px) {
+            document.getElementById('taskbar').style.height = px;
+        }
+ function deletestartmenu(px) {
+            document.getElementById('start-menu').style.bottom = px;
+        }
+function changeBackgroundWP(url) {
+            document.getElementById('desktop').style.background = url
+        }
+ function cmdchange(color) {
+            document.getElementById('command-prompt').style.backgroundColor = color;
+}
+function startchange(color) {
+            document.getElementById('start-menu').style.backgroundColor = color;
+}
+function startchange2() {
+         const startMenu = document.getElementById('start-menu');
+       textElement.style.color = 'blue';
+}
+        function shutdown() {
+            document.getElementById('shutdown-screen').style.display = 'flex';
+            setTimeout(() => {
+                document.body.innerHTML = '<div style="background-color:black; width:100vw; height:100vh;"></div>';
+            }, 2000); // Simulate a 2-second shutdown
+        }
+
+      
+
+        function restart() {
+            document.getElementById('restart-screen').style.display = 'flex';
+            setTimeout(() => {
+                document.getElementById('restart-screen').style.display = 'none';
+                location.reload();
+            }, 2000); // Simulate a 2-second restart
+        }
+
+        function openFolder(folderName) {
+            const fileExplorerContent = document.getElementById('file-explorer-content');
+            let folderContent = '';
+
+            switch(folderName) {
+                case 'documents':
+                    folderContent = '<div>You do not have permission to open this folder!</div>';
+                    break;
+                case 'downloads':
+                    folderContent = '</div><div class="folder" onclick="Unknownvirus()">unknown.exe</div><div class="folder" onclick="howdidbrogetavirushere()">gta9.exe</div><div class="folder" onclick="idiot()">youareanidiot.sae</div></div>';
+                    break;
+                case 'pictures':
+                    folderContent = '</div>folder is empty</div>';
+                    break;
+                case 'system32':
+                    folderContent = '<div class="folder" onclick="deleteSystem32()">Delete System32</div><div class="folder" onclick="playSound()">startup</div><div class="folder" onclick="restt()">restart.exe</div><div class="folder" onclick="openNotepad2()">restart.txt</div><div class="folder" onclick="harnoa()">Desktop.exe</div><div class="folder" onclick="removedesktop()">DeleteDesktop</div><div class="folder" onclick="deletetaskbar()">Delete Taskbar</div>Taskbar.exe</div>‎ ‎ ‎<br> 2 files have been hidden<br></div>';
+                    break;
+                default:
+                    folderContent = '';
+            }
+
+            fileExplorerContent.innerHTML = `
+                <div class="folder" onclick="openFolder('documents')">Documents</div>
+                <div class="folder" onclick="openFolder('downloads')">Downloads</div>
+                <div class="folder" onclick="openFolder('pictures')">Pictures</div>
+                <div class="folder" onclick="openFolder('system32')">System32</div>
+                ${folderContent}
+            `;
+        }
+
+        function deleteSystem32() {
+            if (confirm("Are you sure you want to delete System32? This action cannot be undone.")) {
+                alert("Deleting System32...");
+                // Simulate the effect of deleting System32 by altering the content or behavior
+                document.body.innerHTML = `
+                    <div style="background-color: blue; width: 100vw; height: 100vh;">
+                        <h1 style="color: white; text-align: 100; margin-top: 0vh;">oh no! an error has occured! Screeti has ran into a problem it couldn't handle!, restart it to go back to normal‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎  ‎ ‎ ‎  ‎ ‎ ‎  ‎ ‎ ‎  ‎ ‎ ‎  ‎ ‎ ‎  ‎ ‎ ‎  ‎ ‎ ‎  ‎ ‎ ‎  ‎ ‎ ‎  ‎ ‎ ‎  ‎ ‎ ‎  ‎ ‎ ‎  ‎ ‎ ‎  ‎ ‎ ‎  ‎ ‎ ‎  ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎
+Problem: file:"System32" was deleted## restart:<button class="action-button" onclick="restart()">Restart</button> ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ If the restart button doesnt work, try reloading the page </h1>
+                    </div>
+                `;
+            }
+        }
+
+        function updateTaskManager() {
+    const taskManagerContent = document.getElementById('task-manager-content');
+    taskManagerContent.innerHTML = '';
+
+    runningProcesses.forEach(process => {
+        const processDiv = document.createElement('div');
+        processDiv.style.display = 'flex';
+        processDiv.style.justifyContent = 'space-between';
+        processDiv.style.alignItems = 'center';
+        processDiv.style.padding = '5px';
+
+        const processName = document.createElement('span');
+        processName.textContent = process;
+
+        const endTaskButton = document.createElement('button');
+        endTaskButton.textContent = 'End Task';
+        endTaskButton.style.marginLeft = '10px';
+        endTaskButton.onclick = () => {
+            closeApp(process);
+            updateTaskManager();
+        };
+
+        processDiv.appendChild(processName);
+        processDiv.appendChild(endTaskButton);
+        taskManagerContent.appendChild(processDiv);
+    });
+}
+
+        window.onload = function() {
+            // Remove the loading screen logic to prevent getting stuck
+        };
+
+        document.getElementById('start-button').addEventListener('click', () => {
+            const startMenu = document.getElementById('start-menu');
+            startMenu.style.display = startMenu.style.display === 'none' ? 'flex' : 'none';
+        });
+ 
+
+        let currentPlayer = 'X';
+        let board = [
+            ['', '', ''],
+            ['', '', ''],
+            ['', '', '']
+        ];
+
+        function placeMarker(row, col) {
+            if (board[row][col] === '') {
+                board[row][col] = currentPlayer;
+                document.getElementById('board').children[row * 3 + col].innerText = currentPlayer;
+
+                // Check for winner
+                if (checkForWinner()) {
+                    alert(`Player ${currentPlayer} wins!`);
+                    resetBoard();
+                } else if (isBoardFull()) {
+                    alert('It\'s a tie!');
+                    resetBoard();
+                } else {
+                    // Switch turn
+                    currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+                }
+            }
+        }
+
+        function checkForWinner() {
+            // Check rows
+            for (let i = 0; i < 3; i++) {
+                if (board[i][0] !== '' && board[i][0] === board[i][1] && board[i][1] === board[i][2]) {
+                    return true;
+                }
+            }
+            // Check columns
+            for (let j = 0; j < 3; j++) {
+                if (board[0][j] !== '' && board[0][j] === board[1][j] && board[1][j] === board[2][j]) {
+                    return true;
+                }
+            }
+            // Check diagonals
+            if (board[0][0] !== '' && board[0][0] === board[1][1] && board[1][1] === board[2][2]) {
+                return true;
+            }
+            if (board[0][2] !== '' && board[0][2] === board[1][1] && board[1][1] === board[2][0]) {
+                return true;
+            }
+            return false;
+        }
+
+        function isBoardFull() {
+            for (let row = 0; row < 3; row++) {
+                for (let col = 0; col < 3; col++) {
+                    if (board[row][col] === '') {
+                        return false;
+                    }
+                }
+            }
+            return true;
+        }
+
+        function resetBoard() {
+            board = [
+                ['', '', ''],
+                ['', '', ''],
+                ['', '', '']
+            ];
+
+            // Clear the board display
+            const cells = document.querySelectorAll('.cell');
+            cells.forEach(cell => {
+                cell.innerText = '';
+            });
+
+            // Reset current player to 'X'
+            currentPlayer = 'X';
+        }
+
+        function openTaskManager() {
+            document.getElementById('task-manager').style.display = 'flex';
+            updateTaskManager();
+        }
+function openApp(appId) {
+    if (appId === 'edge') {
+        document.getElementById(appId).style.display = 'flex';
+    } else {
+        // Existing logic for other apps
+        document.getElementById(appId).style.display = 'flex';
+        if (!runningProcesses.includes(appId)) {
+            runningProcesses.push(appId);
+            updateTaskManager();
+        }
+    }
+}
+function executeCommand() {
+    const inputElement = document.getElementById('command-input');
+    const command = inputElement.value.trim();
+
+    if (command === '') return;
+
+    const outputElement = document.getElementById('command-output');
+    const output = document.createElement('div');
+    output.textContent = `> ${command}`;
+    outputElement.appendChild(output);
+
+    // Handle specific commands (add your own logic)
+    switch (command.toLowerCase()) {
+        case 'help':
+            outputElement.appendChild(document.createTextNode('List of available commands:'));
+            outputElement.appendChild(document.createElement('br'));
+            outputElement.appendChild(document.createTextNode(' - help: Display this help message'));
+            outputElement.appendChild(document.createElement('br'));
+            outputElement.appendChild(document.createTextNode(' - clear: Clear the output'));
+            outputElement.appendChild(document.createElement('br'));
+            outputElement.appendChild(document.createTextNode(' - date: Display the current date and time'));
+            outputElement.appendChild(document.createElement('br'));
+            outputElement.appendChild(document.createTextNode(' - open [app]: Open a specified app'));
+            outputElement.appendChild(document.createElement('br'));
+            outputElement.appendChild(document.createTextNode(' - close [app]: Close a specified app'));
+            outputElement.appendChild(document.createElement('br'));
+            outputElement.appendChild(document.createTextNode(' - restart: Restart the system'));
+            outputElement.appendChild(document.createElement('br'));
+            outputElement.appendChild(document.createTextNode(' - shutdown: Shutdown the system'));
+            outputElement.appendChild(document.createElement('br'));
+            outputElement.appendChild(document.createTextNode(' - tasklist: List all running processes'));
+outputElement.appendChild(document.createElement('br'));
+            outputElement.appendChild(document.createTextNode(' - version: Display the current version of Screeti'));
+outputElement.appendChild(document.createElement('br'));
+            outputElement.appendChild(document.createTextNode('                                               note: if some commands dont work, try using "_"'));
+outputElement.appendChild(document.createElement('br'));
+            outputElement.appendChild(document.createTextNode('  And thats all for now!'));
+            break;
+        case 'clear':
+            outputElement.innerHTML = ''; // Clear output
+            break;
+        case 'date':
+            const date = new Date();
+            outputElement.appendChild(document.createTextNode(`Current date and time: ${date}`));
+            break;
+   case command.match(/^open\s+/)?.input:
+            const appToOpen = command.split(' ')[1];
+            openApp(appToOpen);
+            outputElement.appendChild(document.createTextNode(`Opened ${appToOpen}`));
+            break;
+        case command.match(/^close\s+/)?.input:
+            const appToClose = command.split(' ')[1];
+            closeApp(appToClose);
+            outputElement.appendChild(document.createTextNode(`Closed ${appToClose}`));
+            break;
+        case 'restart':
+            restart();
+            outputElement.appendChild(document.createTextNode('Restarting system...'));
+            break;
+case 'open_gta9':
+            howdidbrogetavirushere();
+            outputElement.appendChild(document.createTextNode('Opened gta9.exe'));
+            break;
+ case 'version':
+            
+            outputElement.appendChild(document.createTextNode('Screeti s current version: 1.8.2'));
+            break;
+        case 'shutdown':
+            timeout = setTimeout(shutdown, 3000);
+            outputElement.appendChild(document.createTextNode('Shutting down system...'));
+            break;
+        case 'tasklist':
+            runningProcesses.forEach(process => {
+                outputElement.appendChild(document.createTextNode(process));
+                outputElement.appendChild(document.createElement('br'));
+         });
+            break;
+        default:
+            outputElement.appendChild(document.createTextNode('Command not recognized.'));
+    }
+
+    inputElement.value = ''; // Clear input field after command execution
+}
+
+function loadLiniaPage() {
+    const url = document.getElementById('linia-url').value;
+    if (!url.startsWith('http://') && !url.startsWith('https://')) {
+        url = 'http://' + url;
+    }
+    document.getElementById('linia-frame').src = url;
+}
+
+function openNotepad() {
+    openApp('notepad');
+}
+
+function openNotepad2() {
+    openApp('notepad2');
+}
+function saveNotepadContent() {
+    const textContent = document.getElementById('notepad-content').value;
+    const blob = new Blob([textContent], { type: 'text/plain' });
+    const anchor = document.createElement('a');
+    anchor.download = 'notepad.txt';
+    anchor.href = window.URL.createObjectURL(blob);
+    anchor.target = '_blank';
+    anchor.style.display = 'none'; // just to be safe
+    document.body.appendChild(anchor);
+    anchor.click();
+    document.body.removeChild(anchor);
+}
+let calcDisplay = document.getElementById('calc-display');
+
+function appendToDisplay(value) {
+    calcDisplay.value += value;
+}
+
+function clearDisplay() {
+    calcDisplay.value = '';
+}
+
+function calculate() {
+    try {
+        let result = eval(calcDisplay.value);
+        calcDisplay.value = result;
+    } catch (error) {
+        calcDisplay.value = 'Error';
+    }
+}
+
+
+function openCalculator() {
+openApp('calculator');
+}
+  function idiotInvert() {
+  document.body.classList.toggle('invert');
+        }
+function nidiotInvert() {
+  document.body.style.filter = "none"; 
+        }
+ function idiotInvert2() {
+  document.body.classList.toggle('invert');
+        }
+function nidiotInvert2() {
+  document.body.style.filter = "none"; 
+        }
+function idiot() {
+openApp('idiot');
+timeout = setTimeout(uidiotexclamaitonmark, 1);
+timeout = setTimeout(oops11, 1);
+timeout = setTimeout(ohok2, 1);
+ timeout = setTimeout(Getidiot, 3000);
+ timeout = setTimeout(cmdisidiot, 3000);
+timeout = setTimeout(Getidiost, 9000);
+timeout = setTimeout(ohok, 23000);
+}
+function uidiotexclamaitonmark() {
+ const noRestartforya = document.getElementById('restart-screen');
+
+              noRestartforya.innerHTML = `document.addEventListener('DOMContentLoaded', () => {
+            const welcomeMessage = document.getElementById('welcomeMessage');
+            const showWelcomeButton = document.getElementById('showWelcomeButton');
+            const removeWelcomeButton = document.getElementById('removeWelcomeButton');
+            const reloadPageButton = document.getElementById('reloadPageButton');
+
+            // Check if the welcome message should be shown
+            if (localStorage.getItem('welcomeShown') === 'true' && sessionStorage.getItem('buttonReload') === 'true') {
+                welcomeMessage.style.display = 'block';
+                sessionStorage.removeItem('buttonReload'); // Reset the session storage flag
+            }
+
+            // Add click event to show the welcome message
+            showWelcomeButton.addEventListener('click', () => {
+                welcomeMessage.style.display = 'block';
+                localStorage.setItem('welcomeShown', 'true');
+            });
+
+            // Add click event to remove the welcome message
+            removeWelcomeButton.addEventListener('click', () => {
+                welcomeMessage.style.display = 'none';
+                localStorage.setItem('welcomeShown', 'false');
+            });
+
+            // Add click event to reload the page with a flag
+            reloadPageButton.addEventListener('click', () => {
+                sessionStorage.setItem('buttonReload', 'true'); // Set a flag in session storage
+                window.location.reload(); // Reload the page
+            });
+        });
+
+           `;
+        
+
+}      
+
+
+
+
+
+
+function Getidiot() {
+ const errorDiv = document.getElementById('app3');
+
+            // Set the inner HTML to show the error message
+            errorDiv.innerHTML = `
+                <h1>
+                    Oh no! An error has occurred! app3 has run into a problem it couldn't handle! Restart it to go back to normal.<br><br>
+                    Problem: "Unknown error"<br><br>
+                    <button onclick="fakerestart()">Restart</button><br><br>
+                    If the restart button doesn't work, try reloading the page.
+                </h1>
+            `;
+        }
+function Getidiost() {
+ const errorDiv = document.getElementById('start-menu');
+
+            // Set the inner HTML to show the error message
+            errorDiv.innerHTML = `
+                <h1>
+                    Oh no! An error has occurred! start-menu has run into a problem it couldn't handle! Restart it to go back to normal.<br><br>
+                    Problem: "Unknown error"<br><br>
+                    <button onclick="fakerestart()">Restart</button><br><br>
+                    If the restart button doesn't work, try reloading the page.
+                </h1>
+            `;
+        }
+function cmdisidiot() {
+ const errorDiv = document.getElementById('command-prompt');
+
+            // Set the inner HTML to show the error message
+            errorDiv.innerHTML = `
+                <h1>
+                    Oh no! An error has occurred! screeti-command-prompt has run into a problem it couldn't handle! Restart it to go back to normal.<br><br>
+                    Problem: "error"<br><br>
+                    <button onclick="fakerestart()">Restart</button><br><br>
+                    If the restart button doesn't work, try reloading the page.
+              IDIOT IDIOT IDIOT IDIOT
+                </h1>
+            `;
+        }
+
+document.querySelectorAll('.maximize-btn').forEach(button => {
+    button.addEventListener('click', () => {
+        const appWindow = button.closest('.app-window');
+        appWindow.classList.toggle('maximized');
+    });
+});
+function Unknownvirus() {
+            restart();
+if (confirm("Are you sure you want to open unknown.exe? this may be harmful.")) {
+                 restart();
+                alert("Deleting System32...");
+                // Simulate the effect of deleting System32 by altering the content or behavior
+                document.body.innerHTML = `
+                    <div style="background-color: blue; width: 100vw; height: 100vh;">
+                        <h1 style="color: white; text-align: 100; margin-top: 0vh;">oh no! an error has occured! Screeti has ran into a problem it couldn't handle!, restart it to go back to normal‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎  ‎ ‎ ‎  ‎ ‎ ‎  ‎ ‎ ‎  ‎ ‎ ‎  ‎ ‎ ‎  ‎ ‎ ‎  ‎ ‎ ‎  ‎ ‎ ‎  ‎ ‎ ‎  ‎ ‎ ‎  ‎ ‎ ‎  ‎ ‎ ‎  ‎ ‎ ‎  ‎ ‎ ‎  ‎ ‎ ‎  ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ 
+Problem: file:"unknown.exe" has deleted file "System32" ## restart:<button class="action-button" onclick="restart()">Restart</button> ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ If the restart button doesnt work, try reloading the page </h1>
+                    </div>
+                `;
+            }
+        }
+function restt() {
+restartfake();
+}
+function restartfake() {
+            document.getElementById('restart-screen').style.display = 'flex';
+            setTimeout(() => {
+                document.getElementById('restart-screen').style.display = 'none';
+                location.reload();
+            }, 9000); // Simulate a 2-second restart 
+        }
+function deletetaskbar() {
+changeTB('0px')
+deletestartmenu('555555570px')
+}
+function disabletaskbar() {
+changeTB('0px')
+deletestartmenu('-10px')
+}
+function enabletaskbar() {
+changeTB('50px')
+deletestartmenu('50px')
+}
+function memz() {
+alert("App does not exist")
+300
+openApp(app1);
+}
+function howdidbrogetavirushere() {
+openApp('calculator');
+  timeout = setTimeout(alertFunc, 3000);
+ timeout = setTimeout(idiotInvert, 4000);
+timeout = setTimeout(nidiotInvert, 6000);
+timeout = setTimeout(Hehehehe, 9000);
+ timeout = setTimeout(idiotInvert2, 10000);
+timeout = setTimeout(nidiotInvert2, 12000);
+timeout = setTimeout(Screetiisgettingbullied, 10000);
+timeout = setTimeout(payloadgta9, 19000);
+timeout = setTimeout(openAppspt1, 24000);
+timeout = setTimeout(oops, 28000);
+timeout = setTimeout(enabletaskbar, 30000);
+timeout = setTimeout(oops2, 28000);
+timeout = setTimeout(oops3, 19000);
+timeout = setTimeout(openAppspt2, 29000);
+timeout = setTimeout(openAppspt3, 32000);
+timeout = setTimeout(wownarts, 35000);
+timeout = setTimeout(wownarts2, 86000);
+timeout = setTimeout(peepeepoo, 130020);
+timeout = setTimeout(openAppspt4, 42000);
+timeout = setTimeout(oops4, 45000);
+timeout = setTimeout(yesp, 47000);
+timeout = setTimeout(oops5, 49000);
+timeout = setTimeout(oops7, 49000);
+timeout = setTimeout(oops8, 59000);
+timeout = setTimeout(openAppspt5, 72000);
+timeout = setTimeout(oops10, 1);
+timeout = setTimeout(oops11, 1);
+timeout = setTimeout(oops12, 1);
+timeout = setTimeout(oops13, 5000);
+timeout = setTimeout(wownarts3, 88000);
+  timeout = setTimeout(alertFunc, 93000);
+
+}
+function alertFunc() {
+  alert("Are you sure you want to open gta9.exe?");
+}
+function alertFunc3() {
+  alert("Are you enjoying gta9.exe so far?");
+}
+function Hehehehe() {
+changeBackgroundColor('red');
+}
+
+function Screetiisgettingbullied() {
+  alert("Congrats! you just f*cked this computer hahaha lol");
+}
+function payloadgta9() {
+  changeTB('0px')
+changeBackgroundColor('black');
+deletestartmenu('-10px')
+}
+function openAppspt1() {
+openApp('tic-tac-toe');
+}
+function oops() {
+  const element = document.getElementById("app3");
+  element.remove();
+}
+function oops2() {
+  const element = document.getElementById("app2");
+  element.remove();
+}
+function oops3() {
+document.getElementById("app1").innerHTML = "HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!";
+}
+function oops4() {
+document.getElementById("calculator").innerHTML = "HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!";
+}
+function yesp() {
+  alert("lol");
+}
+function openAppspt2() {
+openApp('linia');
+}
+function openAppspt3() {
+openApp('notepad2');
+}
+function openAppspt4() {
+openApp('command-prompt');
+}
+function wownarts() {
+changeBackgroundColor('orange');
+}
+function wownarts2() {
+changeBackgroundColor('yellow');
+}
+function wownarts3() {
+changeBackgroundColor('black');
+}
+function wownarts4() {
+changeBackgroundColor('white');
+}
+function oops5() {
+document.getElementById("start-menu").innerHTML = "HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!";
+}
+function oops6() {
+document.getElementById("icon3").innerHTML = "HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!";
+}
+function oops7() {
+document.getElementById("taskbar-icons").innerHTML = "HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!";
+}
+function oops8() {
+document.getElementById("taskbar").innerHTML = "HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!";
+}
+function oops12() {
+document.getElementById("settings").innerHTML = "HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!";
+}
+function oops13() {
+document.getElementById("file-explorer").innerHTML = "HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!HACKED!";
+}
+function oops10() {
+  const element = document.getElementById("restart-screen");
+  element.remove();
+}
+function oops11() {
+  const element = document.getElementById("shutdown-screen");
+  element.remove();
+}
+
+function openAppspt5() {
+openApp('calculator');
+}
+function peepeepoo() {
+ document.body.innerHTML = `
+                    <div style="background-color: black; width: 100vw; height: 100vh;">
+                        <h1 style="color: white; text-align: 100; margin-top: 0vh;">oh no! an error has occured! Screeti has ran into a problem it couldn't handle!, restart it to go back to normal‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎  ‎ ‎ ‎  ‎ ‎ ‎  ‎ ‎ ‎  ‎ ‎ ‎  ‎ ‎ ‎  ‎ ‎ ‎  ‎ ‎ ‎  ‎ ‎ ‎  ‎ ‎ ‎  ‎ ‎ ‎  ‎ ‎ ‎  ‎ ‎ ‎  ‎ ‎ ‎  ‎ ‎ ‎  ‎ ‎ ‎  ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ 
+Problem:"Unknown error" ## restart:<button class="action-button" onclick="restart()">Restart</button> ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ If the restart button doesnt work, try reloading the page </h1>
+                    </div>
+                `;
+            }
+
+function removedesktop() {
+timeout = setTimeout(wownarts3, 2000);
+timeout = setTimeout(ohok, 7000);
+timeout = setTimeout(wownarts4, 8000);
+timeout = setTimeout(peepeepoo, 20000);
+}
+function ohok() {
+document.getElementById("desktop").innerHTML = "Screeti had an error trying to run 'desktop.exe' please restart";
+document.getElementById("file-explorer").innerHTML = "Screeti had an error trying to run 'file explorer' please restart";
+
+}
+function ohok2() {
+document.getElementById("file-explorer").innerHTML = "Screeti had an error trying to run 'file explorer' please restart";
+
+}
+
+
+
+function harnoa() {
+alert("App is already in use!")
+}
+let highestZIndex = 1;
+
+
+function bringToFront(appWindow) {
+  // Increment the highest zIndex and set it to the clicked window
+  highestZIndex += 1;
+  appWindow.style.zIndex = highestZIndex;
+}
+
+// Get all app windows and add click event listeners to them
+document.querySelectorAll('.app-window').forEach(appWindow => {
+  appWindow.addEventListener('click', () => {
+    bringToFront(appWindow);
+  });
+});
+
+// Optionally, a function to show the window (e.g., when you click an icon)
+function showApp(appId) {
+  const appWindow = document.getElementById(appId);
+  appWindow.style.display = 'block';
+  bringToFront(appWindow);
+}
+
+</script>
+</body>
+</html>
+          
+     
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Intro Animation</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+    }
+
+    .intro {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: #282c34;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 2rem;
+      transition: opacity 2s ease;
+ z-index: 2;
+    }
+
+    .main-content {
+      display: none;
+      text-align: center;
+    }
+
+    .intro-text {
+      animation: fadeInOut 4s forwards;
+    }
+
+    }
+    @keyframes fadeInOut {
+      0% { opacity: 0; } &lrm;
+      25% { opacity: 1; }
+      75% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="intro">
+    <div class="intro-text">Booting Screeti...</div>
+</div>
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const intro = document.querySelector('.intro');
+      const mainContent = document.querySelector('.main-content');
+
+      setTimeout(() => {
+        intro.style.opacity = '0';
+        setTimeout(() => {
+          intro.style.display = 'none';
+          mainContent.style.display = 'block';
+        }, 2000);
+      }, 5000);
+    });
+  </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sound Effect Example</title>
+</head>
+<body>
+    <audio id="myAudio" src="startup.mp3"></audio>
+
+    <script>
+        // Function to play the audio
+        function playSound() {
+            var audio = document.getElementById("myAudio");
+            audio.play();
+        }
+
+        // Set a timeout to play the sound after 9 seconds
+        setTimeout(playSound, 5000); // 9000 milliseconds = 9 seconds
+setTimeout(openapp1, 5000); // 9000 milliseconds = 9 seconds
+function openapp1() {
+    openApp('app1');
+}
+    </script>
+</body>
+</html>
+
+
